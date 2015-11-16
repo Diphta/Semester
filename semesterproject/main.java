@@ -19,7 +19,7 @@ public class main {
     }
     
     public void print() {
-        System.out.print("This works!!!")
+        System.out.print("This works!!!");
     }
     
 }

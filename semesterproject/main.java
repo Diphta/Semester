@@ -16,8 +16,9 @@ public class main {
      */
     public static void main(String[] args) {
         System.out.println("hej");
-    }
-    
+        Hall hal1 = new Hall("Sal 1", 10, 12);
+                
+                }
     public void print() {
         //Printer
         System.out.print("This works!!!");

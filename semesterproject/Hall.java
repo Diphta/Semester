@@ -12,7 +12,7 @@ package semesterproject;
 public class Hall {
     
     private final String name;
-    private final Seat[][] seats;
+    final Seat[][] seats;
 
     public Hall(String name, int numberRows, int numberSeats) {
         this.name = name;

@@ -6,13 +6,14 @@
 package semesterproject;
 
 import java.awt.CardLayout;
+import java.awt.Graphics;
 
 /**
  *
  * @author Dino
  */
 public class Test extends javax.swing.JFrame {
-
+    Hall hal;
     /**
      * Creates new form Test
      */
@@ -153,6 +154,13 @@ public class Test extends javax.swing.JFrame {
         cl.next(jPanel1);
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    public void drawSeats(Graphics g) {
+        for (Seat[] chair: hal.seats) {
+            for (Seat seat: chair) {
+                seat.draw(g);
+            }
+        }
+    }
     /**
      * @param args the command line arguments
      */

@@ -18,4 +18,8 @@ public class main {
         System.out.println("hej");
     }
     
+    public void print() {
+        System.out.print("This works!!!")
+    }
+    
 }

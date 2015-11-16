@@ -5,6 +5,9 @@
  */
 package semesterproject;
 
+import java.awt.Color;
+import java.awt.Graphics;
+
 /**
  *
  * @author philip
@@ -13,6 +16,13 @@ public class Seat {
     private boolean available;
     private int seatNumber;
     
-    
-    
+    public void draw(Graphics g) {
+        if (available) {
+            g.setColor(Color.GREEN);
+            g.drawRect(10, 10, 20, 20);
+        } else {
+            g.setColor(Color.RED);
+            g.drawRect(10, 10, 20, 20);
+        }
+    }
 }

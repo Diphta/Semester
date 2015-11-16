@@ -15,7 +15,6 @@ public class main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("hej");
         Hall hal1 = new Hall("Sal 1", 10, 12);
                 
                 }

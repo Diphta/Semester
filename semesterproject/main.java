@@ -16,6 +16,7 @@ public class main {
      */
     public static void main(String[] args) {
         Hall hal1 = new Hall("Sal 1", 10, 12);
+        hal1.fillSeats();
                 
                 }
     public void print() {

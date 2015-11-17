@@ -235,8 +235,8 @@
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="jScrollPane1" min="-2" pref="194" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                      <Component id="jScrollPane1" min="-2" pref="176" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -260,8 +260,8 @@
                           <Component id="costumer_continue" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" min="-2" pref="159" max="-2" attributes="0"/>
-                      <EmptySpace pref="56" max="32767" attributes="0"/>
+                      <Component id="jScrollPane1" min="-2" pref="146" max="-2" attributes="0"/>
+                      <EmptySpace pref="69" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>

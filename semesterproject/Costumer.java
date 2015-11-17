@@ -15,15 +15,15 @@ public class Costumer {
     private int phoneNumber;
     private String cardNumber; 
     private int controlDigits;
+    private int age;
 
-    public Costumer(String name, int phoneNumber, String cardNumber, int controlDigits) {
+    public Costumer(String name, int phoneNumber, String cardNumber, int controlDigits, int age) {
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.cardNumber = cardNumber;
         this.controlDigits = controlDigits;
+        this.age = age;
     }
-    
-    
 
     public String getName() {
         return name;
@@ -56,7 +56,13 @@ public class Costumer {
     public void setControlDigits(int controlDigits) {
         this.controlDigits = controlDigits;
     }
-    
-           
-    
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
 }

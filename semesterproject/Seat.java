@@ -7,22 +7,43 @@ package semesterproject;
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Point;
 
 /**
  *
  * @author philip
  */
 public class Seat {
-    private boolean available;
+    private boolean available = true;
     private int seatNumber;
+    private int x = 0;
+    private int y = 0;
     
     public void draw(Graphics g) {
         if (available) {
             g.setColor(Color.GREEN);
-            g.drawRect(10, 10, 20, 20);
+            g.fillRect(getX(), getY(), 20, 20);
         } else {
             g.setColor(Color.RED);
-            g.drawRect(10, 10, 20, 20);
+            g.fillRect(getX(), getY(), 20, 20);
         }
     }
+
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+    
+    
 }

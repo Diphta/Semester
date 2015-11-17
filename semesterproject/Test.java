@@ -13,12 +13,12 @@ import java.awt.Graphics;
  * @author Dino
  */
 public class Test extends javax.swing.JFrame {
-    Hall hal;
     /**
      * Creates new form Test
      */
     public Test() {
         initComponents();
+        
     }
 
     /**
@@ -39,7 +39,13 @@ public class Test extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jList2 = new javax.swing.JList();
         jButton4 = new javax.swing.JButton();
-        jPanel4 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel(){
+            public void paint(Graphics g) {
+                super.paint(g);
+                drawSeats(g);
+            }
+        }
+        ;
         jPanel3 = new javax.swing.JPanel();
         jToggleButton1 = new javax.swing.JToggleButton();
 
@@ -173,16 +179,21 @@ public class Test extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     public void drawSeats(Graphics g) {
+        Hall hal = new Hall("Sal 1", 10, 10);
+        hal.fillSeats();
         for (Seat[] chair: hal.seats) {
             for (Seat seat: chair) {
+                seat.setX(getX()+10);
+                seat.setY(getY()+10);
                 seat.draw(g);
             }
         }
+        repaint();
     }
     /**
      * @param args the command line arguments
      */
-    public static void per(String args[]) {
+    public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.

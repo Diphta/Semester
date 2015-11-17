@@ -382,12 +382,11 @@ public class Test extends javax.swing.JFrame {
     }//GEN-LAST:event_PayButtonActionPerformed
 
     public void drawSeats(Graphics g) {
-        Hall hal = new Hall("Sal 1", 10, 10);
+        Hall hal = new Hall("Sal 1", 3, 2);
         hal.fillSeats();
         for (Seat[] chair: hal.seats) {
             for (Seat seat: chair) {
-                seat.setX(getX()+10);
-                seat.setY(getY()+10);
+                System.out.println(seat.toString());
                 seat.draw(g);
             }
         }

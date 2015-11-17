@@ -20,6 +20,11 @@ public class Seat {
     private int x = 0;
     private int y = 0;
     
+    public Seat(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+    
     public void draw(Graphics g) {
         if (available) {
             g.setColor(Color.GREEN);
@@ -50,6 +55,11 @@ public class Seat {
 
     public void setY(int y) {
         this.y = y;
+    }
+    
+    @Override
+    public String toString() {
+        return x + " " + y;
     }
     
     

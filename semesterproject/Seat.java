@@ -29,7 +29,10 @@ public class Seat {
             g.drawString(seatNumber, x+3, y+9);
         } else {
             g.setColor(Color.RED);
-            g.fillRect(getX(), getY(), 20, 20);
+            g.fillRect(getX(), getY(), 15, 15);
+            g.setColor(Color.BLACK);
+            g.setFont(new Font("TimesRoman", Font.PLAIN, 10));
+            g.drawString(seatNumber, x+3, y+9);
         }
     }
 

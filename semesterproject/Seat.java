@@ -6,6 +6,7 @@
 package semesterproject;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 
 
@@ -15,14 +16,17 @@ import java.awt.Graphics;
  */
 public class Seat {
     private boolean available = true;
-    private int seatNumber;
+    private String seatNumber = "1";
     private int x = 0;
     private int y = 0;
     
     public void draw(Graphics g) {
         if (available) {
             g.setColor(Color.GREEN);
-            g.fillRect(getX(), getY(), 20, 20);
+            g.fillRect(getX(), getY(), 15, 15);
+            g.setColor(Color.BLACK);
+            g.setFont(new Font("TimesRoman", Font.PLAIN, 10));
+            g.drawString(seatNumber, x+3, y+9);
         } else {
             g.setColor(Color.RED);
             g.fillRect(getX(), getY(), 20, 20);

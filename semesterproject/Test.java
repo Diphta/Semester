@@ -46,8 +46,6 @@ public class Test extends javax.swing.JFrame {
         }
         ;
         jLabel1 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
-        jToggleButton1 = new javax.swing.JToggleButton();
         payment = new javax.swing.JPanel();
         name_field = new javax.swing.JTextField();
         age_field = new javax.swing.JTextField();
@@ -59,6 +57,8 @@ public class Test extends javax.swing.JFrame {
         controldigits_field = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         movie_info = new javax.swing.JTextArea();
+        jPanel3 = new javax.swing.JPanel();
+        jToggleButton1 = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -152,27 +152,6 @@ public class Test extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, "card2");
 
-        jToggleButton1.setText("jToggleButton1");
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(167, 167, 167)
-                .addComponent(jToggleButton1)
-                .addContainerGap(286, Short.MAX_VALUE))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(184, 184, 184)
-                .addComponent(jToggleButton1)
-                .addContainerGap(228, Short.MAX_VALUE))
-        );
-
-        jPanel1.add(jPanel3, "card3");
-
         name_field.setText("Name");
 
         age_field.setText("Age");
@@ -196,6 +175,7 @@ public class Test extends javax.swing.JFrame {
 
         movie_info.setColumns(20);
         movie_info.setRows(5);
+        movie_info.setText(" ");
         jScrollPane1.setViewportView(movie_info);
 
         javax.swing.GroupLayout paymentLayout = new javax.swing.GroupLayout(payment);
@@ -222,7 +202,7 @@ public class Test extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, paymentLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29))
+                .addGap(43, 43, 43))
         );
         paymentLayout.setVerticalGroup(
             paymentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -248,6 +228,27 @@ public class Test extends javax.swing.JFrame {
         );
 
         jPanel1.add(payment, "card4");
+
+        jToggleButton1.setText("jToggleButton1");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(167, 167, 167)
+                .addComponent(jToggleButton1)
+                .addContainerGap(286, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(184, 184, 184)
+                .addComponent(jToggleButton1)
+                .addContainerGap(228, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(jPanel3, "card3");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

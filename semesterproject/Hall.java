@@ -15,6 +15,7 @@ public class Hall {
     final Seat[][] seats;
     private int x0 = 0;
     private int y0 = 0;
+    private int seatCounter = 0;
 
     public Hall(String name, int numberRows, int numberSeats) {
         this.name = name;
@@ -26,9 +27,15 @@ public class Hall {
             for (int y = 0; y < seats[x].length; y++) {
                 Seat st = new Seat(x0 + 10, y0 + 10);
                 seats[x][y] = st;
+                seatCounter++;
+                if (seatCounter >= 20) {
+                    seatCounter = 0;
+                     y0 += 20;
+                     x0 = 0;
+                } else {
                 x0 += 20;
-                //y0 += 10;
             }
         }
     }
+}
 }

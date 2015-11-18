@@ -422,7 +422,7 @@ public class Test extends javax.swing.JFrame {
 
     public void drawSeats(Graphics g) {
         Hall hal = new Hall("Sal 1", 14, 20);
-        hal.fillSeats();
+        hal.fillSeatsSal1();
         for (Seat[] chair: hal.seats) {
             for (Seat seat: chair) {
                 System.out.println(seat.toString());

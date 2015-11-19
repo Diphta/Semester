@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package semesterproject;
+package Classes;
 
 /**
  *
@@ -11,26 +11,47 @@ package semesterproject;
  */
 public class Costumer {
     
-    private String name;
+    private String firstName;
+    private String lastName;
     private int phoneNumber;
     private String cardNumber; 
     private int controlDigits;
     private int age;
 
-    public Costumer(String name, int phoneNumber, String cardNumber, int controlDigits, int age) {
-        this.name = name;
+    public Costumer(String firstName, String lastName, int phoneNumber, String cardNumber, int controlDigits, int age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.phoneNumber = phoneNumber;
         this.cardNumber = cardNumber;
         this.controlDigits = controlDigits;
         this.age = age;
     }
 
-    public String getName() {
-        return name;
+    public String costumerDetails() {
+        return "Costumer{" + "firstName=" + firstName + ", lastName=" + lastName + ", phoneNumber=" + phoneNumber + ", age=" + age + '}';
     }
 
-    public void setName(String name) {
-        this.name = name;
+    @Override
+    public String toString() {
+        return "Costumer{" + "firstName=" + firstName + ", lastName=" + lastName + ", phoneNumber=" + phoneNumber + ", age=" + age + '}';
+    }
+    
+    
+ 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public int getPhoneNumber() {
@@ -65,4 +86,5 @@ public class Costumer {
         this.age = age;
     }
 
+   
 }

@@ -5,6 +5,7 @@
  */
 package semesterproject;
 
+import Classes.*;
 import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.Graphics;

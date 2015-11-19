@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package semesterproject;
+package Classes;
 
 /**
  *
@@ -12,7 +12,7 @@ package semesterproject;
 public class Hall {
     
     private final String name;
-    final Seat[][] seats;
+    public Seat[][] seats;
     private int x0 = 0;
     private int y0 = 0;
     private int seatCounter = 0;

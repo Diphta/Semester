@@ -39,19 +39,6 @@ public class Test extends javax.swing.JFrame {
         jComboBox3 = new javax.swing.JComboBox();
         jButton4 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        seatChoiceSal2 = new javax.swing.JPanel() {
-            public void paint(Graphics g) {
-                super.paint(g);
-                drawSeats(g);
-            }
-        };
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jList2 = new javax.swing.JList();
-        jPanel4 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         seatChoiceSal1 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel(){
             public void paint(Graphics g) {
@@ -66,9 +53,41 @@ public class Test extends javax.swing.JFrame {
         jList4 = new javax.swing.JList();
         jButton5 = new javax.swing.JButton();
         jComboBox5 = new javax.swing.JComboBox();
-        jButton1 = new javax.swing.JButton();
+        payButtonHall1 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        seatChoiceSal2 = new javax.swing.JPanel() {
+            public void paint(Graphics g) {
+                super.paint(g);
+                drawSeats(g);
+            }
+        };
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jList5 = new javax.swing.JList();
+        jLabel4 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox();
+        jButton2 = new javax.swing.JButton();
+        payButtonHall2 = new javax.swing.JButton();
+        seatChoiceSal3 = new javax.swing.JPanel();
+        jPanel6 = new javax.swing.JPanel(){
+            public void paint(Graphics g) {
+                super.paint(g);
+                drawSeats(g);
+            }
+        };
+        jLabel7 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jList2 = new javax.swing.JList();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        jList6 = new javax.swing.JList();
+        jLabel8 = new javax.swing.JLabel();
+        jComboBox2 = new javax.swing.JComboBox();
+        jButton1 = new javax.swing.JButton();
+        payButtonHall3 = new javax.swing.JButton();
         payment = new javax.swing.JPanel();
         nameField = new javax.swing.JTextField();
         ageField = new javax.swing.JTextField();
@@ -139,78 +158,6 @@ public class Test extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, "card2");
 
-        jList1.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "1", "2", "3", "4", "5", "6", "7", "8" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
-        jList1.setMaximumSize(new java.awt.Dimension(14, 80));
-        jList1.setMinimumSize(new java.awt.Dimension(14, 80));
-        jScrollPane2.setViewportView(jList1);
-
-        jList2.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
-        jList2.setMaximumSize(new java.awt.Dimension(14, 80));
-        jList2.setMinimumSize(new java.awt.Dimension(14, 80));
-        jScrollPane3.setViewportView(jList2);
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 247, Short.MAX_VALUE)
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 168, Short.MAX_VALUE)
-        );
-
-        jLabel3.setText("Række");
-
-        jLabel4.setText("Sæde");
-
-        javax.swing.GroupLayout seatChoiceSal2Layout = new javax.swing.GroupLayout(seatChoiceSal2);
-        seatChoiceSal2.setLayout(seatChoiceSal2Layout);
-        seatChoiceSal2Layout.setHorizontalGroup(
-            seatChoiceSal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, seatChoiceSal2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(seatChoiceSal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane2)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGroup(seatChoiceSal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(seatChoiceSal2Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel4))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, seatChoiceSal2Layout.createSequentialGroup()
-                        .addGap(5, 5, 5)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(254, Short.MAX_VALUE))
-        );
-        seatChoiceSal2Layout.setVerticalGroup(
-            seatChoiceSal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(seatChoiceSal2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(seatChoiceSal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(seatChoiceSal2Layout.createSequentialGroup()
-                        .addGroup(seatChoiceSal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(seatChoiceSal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4))))
-                .addContainerGap(272, Short.MAX_VALUE))
-        );
-
-        jPanel1.add(seatChoiceSal2, "card6");
-
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
@@ -240,10 +187,10 @@ public class Test extends javax.swing.JFrame {
 
         jComboBox5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Antal billetter" }));
 
-        jButton1.setText("Betal");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        payButtonHall1.setText("Betal");
+        payButtonHall1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                payButtonHall1ActionPerformed(evt);
             }
         });
 
@@ -262,7 +209,7 @@ public class Test extends javax.swing.JFrame {
                         .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(seatChoiceSal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1)
+                            .addComponent(payButtonHall1)
                             .addComponent(jButton5)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, seatChoiceSal1Layout.createSequentialGroup()
                         .addGap(10, 10, 10)
@@ -300,11 +247,206 @@ public class Test extends javax.swing.JFrame {
                         .addGap(9, 9, 9)
                         .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
+                .addComponent(payButtonHall1)
                 .addContainerGap(49, Short.MAX_VALUE))
         );
 
         jPanel1.add(seatChoiceSal1, "card5");
+
+        jList1.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "1", "2", "3", "4", "5", "6", "7", "8" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        jList1.setMaximumSize(new java.awt.Dimension(14, 80));
+        jList1.setMinimumSize(new java.awt.Dimension(14, 80));
+        jScrollPane2.setViewportView(jList1);
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 247, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 182, Short.MAX_VALUE)
+        );
+
+        jLabel3.setText("Række");
+
+        jList5.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane6.setViewportView(jList5);
+
+        jLabel4.setText("Sæde");
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Antal billetter", "1", "2", "3", "4" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
+
+        jButton2.setText("Tilføj billetter");
+
+        payButtonHall2.setText("Betal");
+        payButtonHall2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                payButtonHall2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout seatChoiceSal2Layout = new javax.swing.GroupLayout(seatChoiceSal2);
+        seatChoiceSal2.setLayout(seatChoiceSal2Layout);
+        seatChoiceSal2Layout.setHorizontalGroup(
+            seatChoiceSal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(seatChoiceSal2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(seatChoiceSal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(seatChoiceSal2Layout.createSequentialGroup()
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton2))
+                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(seatChoiceSal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(seatChoiceSal2Layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel4))
+                    .addGroup(seatChoiceSal2Layout.createSequentialGroup()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(241, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, seatChoiceSal2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(payButtonHall2)
+                .addGap(23, 23, 23))
+        );
+        seatChoiceSal2Layout.setVerticalGroup(
+            seatChoiceSal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(seatChoiceSal2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(seatChoiceSal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(seatChoiceSal2Layout.createSequentialGroup()
+                        .addGroup(seatChoiceSal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane2)
+                            .addComponent(jScrollPane6))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(seatChoiceSal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4)))
+                    .addGroup(seatChoiceSal2Layout.createSequentialGroup()
+                        .addGap(0, 1, Short.MAX_VALUE)
+                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(seatChoiceSal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton2))
+                .addGap(191, 191, 191)
+                .addComponent(payButtonHall2)
+                .addContainerGap())
+        );
+
+        jPanel1.add(seatChoiceSal2, "card6");
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 139, Short.MAX_VALUE)
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 194, Short.MAX_VALUE)
+        );
+
+        jLabel7.setText("Række");
+
+        jList2.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "1", "2", "3", "4", "5", "6", "7", "8" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane3.setViewportView(jList2);
+
+        jList6.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "1", "2", "3", "4", "5", "6" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane7.setViewportView(jList6);
+
+        jLabel8.setText("Sæde");
+
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Antal billetter" }));
+
+        jButton1.setText("Tilføj billetter");
+
+        payButtonHall3.setText("Betal");
+        payButtonHall3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                payButtonHall3ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout seatChoiceSal3Layout = new javax.swing.GroupLayout(seatChoiceSal3);
+        seatChoiceSal3.setLayout(seatChoiceSal3Layout);
+        seatChoiceSal3Layout.setHorizontalGroup(
+            seatChoiceSal3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(seatChoiceSal3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(seatChoiceSal3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(seatChoiceSal3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(seatChoiceSal3Layout.createSequentialGroup()
+                        .addGroup(seatChoiceSal3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jScrollPane3))
+                        .addGap(18, 18, 18)
+                        .addGroup(seatChoiceSal3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel8)))
+                    .addGroup(seatChoiceSal3Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jButton1)))
+                .addContainerGap(324, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, seatChoiceSal3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(payButtonHall3)
+                .addContainerGap())
+        );
+        seatChoiceSal3Layout.setVerticalGroup(
+            seatChoiceSal3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(seatChoiceSal3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(seatChoiceSal3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(seatChoiceSal3Layout.createSequentialGroup()
+                        .addGroup(seatChoiceSal3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane3)
+                            .addComponent(jScrollPane7))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(seatChoiceSal3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel8)))
+                    .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(seatChoiceSal3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 180, Short.MAX_VALUE)
+                .addComponent(payButtonHall3)
+                .addContainerGap())
+        );
+
+        jPanel1.add(seatChoiceSal3, "card7");
 
         nameField.setText("Name");
 
@@ -502,31 +644,49 @@ public class Test extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_PayButtonActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void payButtonHall1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_payButtonHall1ActionPerformed
         CardLayout cl = (CardLayout) jPanel1.getLayout();
-        cl.next(jPanel1);
-    }//GEN-LAST:event_jButton1ActionPerformed
+        cl.addLayoutComponent("Payment", payment);
+        cl.show(jPanel1, "Payment");
+    }//GEN-LAST:event_payButtonHall1ActionPerformed
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void payButtonHall2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_payButtonHall2ActionPerformed
+        CardLayout cl = (CardLayout) jPanel1.getLayout();
+        cl.addLayoutComponent("Payment", payment);
+        cl.show(jPanel1, "Payment");
+    }//GEN-LAST:event_payButtonHall2ActionPerformed
+
+    private void payButtonHall3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_payButtonHall3ActionPerformed
+        CardLayout cl = (CardLayout) jPanel1.getLayout();
+        cl.addLayoutComponent("Payment", payment);
+        cl.show(jPanel1, "Payment");
+    }//GEN-LAST:event_payButtonHall3ActionPerformed
 
     public void drawSeats(Graphics g) {
 //        Hall hal1 = new Hall("Sal 1", 14, 20);
 //        hal1.fillSeatsSal1();
-        Hall hal2 = new Hall("Sal 2", 8, 12);
-        hal2.fillSeatsSal2();
-//          Hall hal3 = new Hall("Sal 3", 8, 6);
-//          hal3.fillSeatsSal3();
-        for (Seat[] chair: hal2.seats) {
+//        Hall hal2 = new Hall("Sal 2", 8, 12);
+//        hal2.fillSeatsSal2();
+          Hall hal3 = new Hall("Sal 3", 8, 6);
+          hal3.fillSeatsSal3();
+        for (Seat[] chair: hal3.seats) {
             for (Seat seat: chair) {
                 System.out.println(seat.toString());
                 seat.draw(g);
             }
         }
-        /* sal 1
         g.setColor(Color.BLACK);
+        /* sal 1
         g.fillRect(90, 300, 235, 10);
         */
-        
-        g.setColor(Color.BLACK);
-        g.fillRect(100, WIDTH, WIDTH, WIDTH);
+        /* sal 2
+        g.fillRect(50, 180, 155, 10);
+        */
+        g.fillRect(30, 180, 75, 10);
         
     }
     /**
@@ -572,8 +732,11 @@ public class Test extends javax.swing.JFrame {
     private javax.swing.JComboBox expiration_month;
     private javax.swing.JComboBox expiration_year;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JComboBox jComboBox1;
+    private javax.swing.JComboBox jComboBox2;
     private javax.swing.JComboBox jComboBox3;
     private javax.swing.JComboBox jComboBox5;
     private javax.swing.JLabel jLabel1;
@@ -582,26 +745,37 @@ public class Test extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JList jList1;
     private javax.swing.JList jList2;
     private javax.swing.JList jList3;
     private javax.swing.JList jList4;
+    private javax.swing.JList jList5;
+    private javax.swing.JList jList6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JTextArea movie_info;
     private javax.swing.JTextField nameField;
+    private javax.swing.JButton payButtonHall1;
+    private javax.swing.JButton payButtonHall2;
+    private javax.swing.JButton payButtonHall3;
     private javax.swing.JPanel payment;
     private javax.swing.JTextField phoneField;
     private javax.swing.JPanel seatChoiceSal1;
     private javax.swing.JPanel seatChoiceSal2;
+    private javax.swing.JPanel seatChoiceSal3;
     // End of variables declaration//GEN-END:variables
 }

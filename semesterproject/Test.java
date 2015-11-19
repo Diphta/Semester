@@ -38,7 +38,7 @@ public class Test extends javax.swing.JFrame {
         jComboBox3 = new javax.swing.JComboBox();
         jButton4 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        SeatChoice = new javax.swing.JPanel();
+        SeatChoiceSal1 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel(){
             public void paint(Graphics g) {
                 super.paint(g);
@@ -133,7 +133,7 @@ public class Test extends javax.swing.JFrame {
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 298, Short.MAX_VALUE)
+            .addGap(0, 317, Short.MAX_VALUE)
         );
 
         jList3.setModel(new javax.swing.AbstractListModel() {
@@ -165,59 +165,60 @@ public class Test extends javax.swing.JFrame {
 
         jLabel6.setText("Sæde");
 
-        javax.swing.GroupLayout SeatChoiceLayout = new javax.swing.GroupLayout(SeatChoice);
-        SeatChoice.setLayout(SeatChoiceLayout);
-        SeatChoiceLayout.setHorizontalGroup(
-            SeatChoiceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(SeatChoiceLayout.createSequentialGroup()
-                .addGroup(SeatChoiceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SeatChoiceLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(SeatChoiceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout SeatChoiceSal1Layout = new javax.swing.GroupLayout(SeatChoiceSal1);
+        SeatChoiceSal1.setLayout(SeatChoiceSal1Layout);
+        SeatChoiceSal1Layout.setHorizontalGroup(
+            SeatChoiceSal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(SeatChoiceSal1Layout.createSequentialGroup()
+                .addGroup(SeatChoiceSal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SeatChoiceSal1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(SeatChoiceSal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton1)
                             .addComponent(jButton5)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SeatChoiceLayout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SeatChoiceSal1Layout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(18, 18, 18)
-                        .addGroup(SeatChoiceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(SeatChoiceSal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel5))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(SeatChoiceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(SeatChoiceSal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel6))
                         .addGap(47, 47, 47)))
                 .addContainerGap())
-            .addGroup(SeatChoiceLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        SeatChoiceLayout.setVerticalGroup(
-            SeatChoiceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(SeatChoiceLayout.createSequentialGroup()
+        SeatChoiceSal1Layout.setVerticalGroup(
+            SeatChoiceSal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(SeatChoiceSal1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(SeatChoiceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(SeatChoiceLayout.createSequentialGroup()
-                        .addGroup(SeatChoiceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 275, Short.MAX_VALUE)
-                            .addComponent(jScrollPane4))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(SeatChoiceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(SeatChoiceSal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(SeatChoiceSal1Layout.createSequentialGroup()
+                        .addGroup(SeatChoiceSal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane4)
+                            .addComponent(jScrollPane5))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(SeatChoiceSal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel5)
                             .addComponent(jLabel6)))
                     .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17)
-                .addComponent(jButton5)
+                .addGroup(SeatChoiceSal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(SeatChoiceSal1Layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(jButton5))
+                    .addGroup(SeatChoiceSal1Layout.createSequentialGroup()
+                        .addGap(9, 9, 9)
+                        .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton1)
                 .addContainerGap(49, Short.MAX_VALUE))
         );
 
-        jPanel1.add(SeatChoice, "card5");
+        jPanel1.add(SeatChoiceSal1, "card5");
 
         nameField.setText("Name");
 
@@ -421,18 +422,20 @@ public class Test extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     public void drawSeats(Graphics g) {
-//        Hall hal1 = new Hall("Sal 1", 14, 20);
-//        hal.fillSeatsSal1();
+        Hall hal1 = new Hall("Sal 1", 14, 20);
+        hal1.fillSeatsSal1();
 //        Hall hal2 = new Hall("Sal 2", 8, 12);
 //        hal2.fillSeatsSal2();
-          Hall hal3 = new Hall("Sal 3", 8, 6);
-          hal3.fillSeatsSal3();
-        for (Seat[] chair: hal3.seats) {
+//          Hall hal3 = new Hall("Sal 3", 8, 6);
+//          hal3.fillSeatsSal3();
+        for (Seat[] chair: hal1.seats) {
             for (Seat seat: chair) {
                 System.out.println(seat.toString());
                 seat.draw(g);
             }
         }
+        g.setColor(Color.BLACK);
+        g.fillRect(90, 300, 235, 10);
     }
     /**
      * @param args the command line arguments
@@ -471,7 +474,7 @@ public class Test extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton PayButton;
-    private javax.swing.JPanel SeatChoice;
+    private javax.swing.JPanel SeatChoiceSal1;
     private javax.swing.JTextField ageField;
     private javax.swing.JTextField cardNumberField;
     private javax.swing.JTextField controlDigitsField;

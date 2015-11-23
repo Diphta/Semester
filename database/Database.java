@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Classes;
+package database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -13,7 +13,7 @@ import java.sql.SQLException;
  *
  * @author philip
  */
-public class DBHandler {
+public class Database {
     private static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
     private static final String DATABASE_USR = "root";
     private static final String DATABASE_PWD = "";
@@ -21,10 +21,24 @@ public class DBHandler {
     private static final String SCHEMA = "/test";
     private static String str =  "";
     private static Connection con;
+    private Connection db;
+    
+    private Database() {
+        
+    }
     
     public void connect() throws ClassNotFoundException, SQLException {
         Class.forName(JDBC_DRIVER);
         con = DriverManager.getConnection(DATABASE_URL + SCHEMA,
                 DATABASE_USR, DATABASE_PWD);
     }
+
+    public Connection getDb() {
+        if (db == null) {
+            Database db = new Database();
+        }
+        return db;
+    }
+    
+    
 }

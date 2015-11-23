@@ -20,9 +20,10 @@ public class Seat {
     private int x = 0;
     private int y = 0;
     
-    public Seat(int x, int y) {
+    public Seat(int x, int y, int sn) {
         this.x = x;
         this.y = y;
+        this.seatNumber = Integer.toString(sn);
     }
     
     public void draw(Graphics g) {

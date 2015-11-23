@@ -27,7 +27,7 @@ public class Hall {
     public final void fillSeats(int s) {
         for (int x = 0; x < seats.length; x++) {
             for (int y = 0; y < seats[x].length; y++) {
-                Seat st = new Seat(x0 + 10, y0 + 10);
+                Seat st = new Seat(x0 + 10, y0 + 10, (seatCounter + 1));
                 seats[x][y] = st;
                 seatCounter++;
                 if (seatCounter >= s) {

@@ -29,18 +29,15 @@ public class Seat {
     public void draw(Graphics g) {
         if (available) {
             g.setColor(Color.GREEN);
-            g.fillRect(getX(), getY(), 15, 15);
-            g.setColor(Color.BLACK);
-            g.setFont(new Font("TimesRoman", Font.PLAIN, 10));
-            g.drawString(seatNumber, x+3, y+9);
         } else {
             g.setColor(Color.RED);
+        }
             g.fillRect(getX(), getY(), 15, 15);
             g.setColor(Color.BLACK);
             g.setFont(new Font("TimesRoman", Font.PLAIN, 10));
             g.drawString(seatNumber, x+3, y+9);
         }
-    }
+    
 
     public int getX() {
         return x;

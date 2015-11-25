@@ -6,23 +6,25 @@
 package semesterproject;
 
 import Classes.*;
+import static com.sun.deploy.uitoolkit.impl.fx.ui.MixedCodeInSwing.show;
 import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.Graphics;
+import java.util.ArrayList;
 import javax.swing.BorderFactory;
-
 
 /**
  *
  * @author Dino
  */
 public class Test extends javax.swing.JFrame {
+
     /**
      * Creates new form Test
      */
     public Test() {
         initComponents();
-        
+
     }
 
     /**
@@ -39,6 +41,7 @@ public class Test extends javax.swing.JFrame {
         jComboBox3 = new javax.swing.JComboBox();
         jButton4 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jComboBox4 = new javax.swing.JComboBox();
         seatChoiceSal1 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel(){
             public void paint(Graphics g) {
@@ -112,6 +115,11 @@ public class Test extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Tider" }));
+        jComboBox3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("Videre");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -123,14 +131,19 @@ public class Test extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/semesterproject/Udklip111.PNG"))); // NOI18N
         jLabel1.setText("jLabel1");
 
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Star Wars - The Force Awakens", "Mockingjay - Part 2", "Hotel Transylvania 2", "Spectre", "Paranormal Activity - The Ghost Dimension", "Crimson Peak", "Maze Runner - The Scorch Trials", "Inside Out", "Quist - Et Hardkåre ActionBrag", "Back Door Sluts 8" }));
+        jComboBox4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 223, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(44, 44, 44)
@@ -139,6 +152,12 @@ public class Test extends javax.swing.JFrame {
                         .addGap(10, 10, 10)
                         .addComponent(jButton4)))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(228, 228, 228))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -147,9 +166,11 @@ public class Test extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(6, 6, 6)
                         .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 222, Short.MAX_VALUE))
+                        .addGap(111, 111, 111)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 122, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jButton4)))
@@ -607,39 +628,39 @@ public class Test extends javax.swing.JFrame {
             customerFail = true;
             nameField.setBorder(BorderFactory.createLineBorder(Color.decode("#ff0000")));
         }
-        
-         if (ageField.getText().matches("[0-9]+")&& ageField.getText().length()<=3) {
-             ageField.setBorder(null);
-             ageField.updateUI();
+
+        if (ageField.getText().matches("[0-9]+") && ageField.getText().length() <= 3) {
+            ageField.setBorder(null);
+            ageField.updateUI();
         } else {
             customerFail = true;
             ageField.setBorder(BorderFactory.createLineBorder(Color.decode("#ff0000")));
         }
-       
-          if (phoneField.getText().matches("[0-9]+")&& phoneField.getText().length()==8) {
+
+        if (phoneField.getText().matches("[0-9]+") && phoneField.getText().length() == 8) {
             phoneField.setBorder(null);
             phoneField.updateUI();
         } else {
             customerFail = true;
             phoneField.setBorder(BorderFactory.createLineBorder(Color.decode("#ff0000")));
         }
-           if (cardNumberField.getText().matches("[0-9]+")&& cardNumberField.getText().length()==16) {
+        if (cardNumberField.getText().matches("[0-9]+") && cardNumberField.getText().length() == 16) {
             cardNumberField.setBorder(null);
             cardNumberField.updateUI();
         } else {
             customerFail = true;
             cardNumberField.setBorder(BorderFactory.createLineBorder(Color.decode("#ff0000")));
         }
-            if (controlDigitsField.getText().matches("[0-9]+")&& controlDigitsField.getText().length()==3) {
+        if (controlDigitsField.getText().matches("[0-9]+") && controlDigitsField.getText().length() == 3) {
             controlDigitsField.setBorder(null);
             controlDigitsField.updateUI();
         } else {
             customerFail = true;
             controlDigitsField.setBorder(BorderFactory.createLineBorder(Color.decode("#ff0000")));
         }
-            
-              CardLayout cl = (CardLayout) jPanel1.getLayout();
-        if (!customerFail) {  
+
+        CardLayout cl = (CardLayout) jPanel1.getLayout();
+        if (!customerFail) {
             cl.next(jPanel1);
         }
     }//GEN-LAST:event_PayButtonActionPerformed
@@ -666,26 +687,43 @@ public class Test extends javax.swing.JFrame {
         cl.show(jPanel1, "Payment");
     }//GEN-LAST:event_payButtonHall3ActionPerformed
 
+    private void jComboBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox4ActionPerformed
+        Show selectedShow;
+        selectedShow = (Show) jComboBox1.getSelectedItem();
+        if (selectedShow != null) {
+            jComboBox3.removeAllItems();
+            ArrayList<Show> tempShow = selectedShow.getShow();
+            for (Show show : tempShow) {
+                jComboBox3.addItem(show);
+            }
+        }
+    }//GEN-LAST:event_jComboBox4ActionPerformed
+
+    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox3ActionPerformed
+
     public void drawSeats(Graphics g) {
 //        Hall hal1 = new Hall("Sal 1", 14, 20);
 //        Hall hal2 = new Hall("Sal 2", 8, 12);
         Hall hal3 = new Hall("Sal 3", 8, 6);
-        for (Seat[] chair: hal3.seats) {
-            for (Seat seat: chair) {
+        for (Seat[] chair : hal3.seats) {
+            for (Seat seat : chair) {
                 System.out.println(seat.toString());
                 seat.draw(g);
             }
         }
         g.setColor(Color.BLACK);
         /* sal 1
-        g.fillRect(90, 300, 235, 10);
-        */
+         g.fillRect(90, 300, 235, 10);
+         */
         /* sal 2
-        g.fillRect(50, 180, 155, 10);
-        */
+         g.fillRect(50, 180, 155, 10);
+         */
         g.fillRect(30, 180, 75, 10);
-        
+
     }
+
     /**
      * @param args the command line arguments
      */
@@ -735,6 +773,7 @@ public class Test extends javax.swing.JFrame {
     private javax.swing.JComboBox jComboBox1;
     private javax.swing.JComboBox jComboBox2;
     private javax.swing.JComboBox jComboBox3;
+    private javax.swing.JComboBox jComboBox4;
     private javax.swing.JComboBox jComboBox5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

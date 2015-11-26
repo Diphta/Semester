@@ -12,7 +12,7 @@ package Classes;
 public class TicketElder extends Ticket {
     private int Pbillet = 50;
     public TicketElder(Costumer costumer) {
-        super(costumer);
+        //super(costumer);
     }
     
 }

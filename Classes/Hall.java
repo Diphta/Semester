@@ -6,6 +6,7 @@
 package Classes;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 
 /**
@@ -16,8 +17,8 @@ public class Hall {
     private boolean[][] seats;
     public static final int OFFSET_X = 10;
     public static final int OFFSET_Y = 10;
-    public static final int SEAT_WIDTH = 25;
-    public static final int SEAT_HEIGHT = 20;
+    public static final int SEAT_WIDTH = 17;
+    public static final int SEAT_HEIGHT = 17;
     public static final int ROW_DIST = 10;
     public static final int SEAT_DIST = 5;
     //private final String name;
@@ -84,6 +85,7 @@ public class Hall {
                 g.fillRect(x, y, SEAT_WIDTH, SEAT_HEIGHT);
                 g.setColor(Color.BLACK);
                 g.drawRect(x, y, SEAT_WIDTH, SEAT_HEIGHT);
+                g.setFont(new Font("TimesRoman", Font.PLAIN, 10)); 
                 g.drawString(""+(seat+1), x+6, y+15);
             }
             g.drawString(""+(row+1), x+(SEAT_WIDTH + SEAT_DIST)+OFFSET_X, y+15);

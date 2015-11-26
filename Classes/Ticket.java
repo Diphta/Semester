@@ -10,10 +10,9 @@ package Classes;
  * @author Simon
  */
 public class Ticket {
-
     private Costumer costumer;
 
-    public Ticket(Costumer costumer) {
+    public Ticket(/**Costumer costumer*/) {
         this.costumer = costumer;
     }
 

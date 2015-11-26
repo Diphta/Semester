@@ -9,11 +9,11 @@ package Classes;
  *
  * @author Simon
  */
-public class Tickets {
+public class Ticket {
 
     private Costumer costumer;
 
-    public Tickets(Costumer costumer) {
+    public Ticket(Costumer costumer) {
         this.costumer = costumer;
     }
 
@@ -31,13 +31,13 @@ public class Tickets {
         return sum;
     }
 
-//    public Tickets generateReceit() {
+//    public Ticket generateReceit() {
 //        String receitContent = "";
 //
 //        receitContent += costumer + "kundeoplysninger \n";
 //        receitContent += "--------------------------";
 //        
-//             Tickets receit = new Tickets(receitContent);   
+//             Ticket receit = new Ticket(receitContent);   
 //       return receit;
 //    }
 

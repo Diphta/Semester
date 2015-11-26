@@ -9,10 +9,10 @@ package Classes;
  *
  * @author Simon
  */
-public class BørneBillet extends Tickets {
-    private int Bbillet = 50;
-    public BørneBillet(Costumer costumer) {
+public class TicketElder extends Ticket {
+    private int Pbillet = 50;
+    public TicketElder(Costumer costumer) {
         super(costumer);
     }
-
+    
 }

@@ -15,7 +15,7 @@ public class Show {
 
     private String name;
     private double time;
-    private ShowType showType;
+    //private ShowType showType;
 
     public Show(String name, double time) {
         this.name = name;

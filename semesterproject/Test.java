@@ -6,7 +6,6 @@
 package semesterproject;
 
 import Classes.*;
-import static com.sun.deploy.uitoolkit.impl.fx.ui.MixedCodeInSwing.show;
 import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.Graphics;
@@ -18,11 +17,12 @@ import javax.swing.BorderFactory;
  * @author Dino
  */
 public class Test extends javax.swing.JFrame {
-
+    private Hall hall;
     /**
      * Creates new form Test
      */
     public Test() {
+        hall = new Hall(14, 20);
         initComponents();
 
     }
@@ -46,7 +46,7 @@ public class Test extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel(){
             public void paint(Graphics g) {
                 super.paint(g);
-                drawSeats(g);
+                hall.drawSeats(g);
             }
         }
         ;
@@ -59,15 +59,15 @@ public class Test extends javax.swing.JFrame {
         payButtonHall1 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        seatChoiceSal2 = new javax.swing.JPanel() {
-            public void paint(Graphics g) {
-                super.paint(g);
-                drawSeats(g);
-            }
-        };
+        seatChoiceSal2 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList();
-        jPanel4 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel() {
+            public void paint(Graphics g) {
+                super.paint(g);
+                hall.drawSeats(g);
+            }
+        };
         jLabel3 = new javax.swing.JLabel();
         jScrollPane6 = new javax.swing.JScrollPane();
         jList5 = new javax.swing.JList();
@@ -79,7 +79,7 @@ public class Test extends javax.swing.JFrame {
         jPanel6 = new javax.swing.JPanel(){
             public void paint(Graphics g) {
                 super.paint(g);
-                drawSeats(g);
+                hall.drawSeats(g);
             }
         };
         jLabel7 = new javax.swing.JLabel();
@@ -115,11 +115,6 @@ public class Test extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Tider" }));
-        jComboBox3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox3ActionPerformed(evt);
-            }
-        });
 
         jButton4.setText("Videre");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -178,6 +173,18 @@ public class Test extends javax.swing.JFrame {
         );
 
         jPanel1.add(jPanel2, "card2");
+
+        seatChoiceSal1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                seatChoiceSal1MousePressed(evt);
+            }
+        });
+
+        jPanel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jPanel5MousePressed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -699,30 +706,25 @@ public class Test extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jComboBox4ActionPerformed
 
-    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
+    private void seatChoiceSal1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_seatChoiceSal1MousePressed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox3ActionPerformed
+    }//GEN-LAST:event_seatChoiceSal1MousePressed
 
-    public void drawSeats(Graphics g) {
-//        Hall hal1 = new Hall("Sal 1", 14, 20);
-//        Hall hal2 = new Hall("Sal 2", 8, 12);
-        Hall hal3 = new Hall("Sal 3", 8, 6);
-        for (Seat[] chair : hal3.seats) {
-            for (Seat seat : chair) {
-                System.out.println(seat.toString());
-                seat.draw(g);
+    private void jPanel5MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MousePressed
+        int seat = hall.translateX(evt.getX());
+        int row = hall.translateY(evt.getY());
+         if(seat >= 0 && row >= 0){
+            if(evt.getButton()==1){
+                hall.bookSeat(row, seat);
+            }
+            if(evt.getButton()==3){
+                hall.clearSeat(row, seat);
             }
         }
-        g.setColor(Color.BLACK);
-        /* sal 1
-         g.fillRect(90, 300, 235, 10);
-         */
-        /* sal 2
-         g.fillRect(50, 180, 155, 10);
-         */
-        g.fillRect(30, 180, 75, 10);
+        jPanel5.repaint();
+        
+    }//GEN-LAST:event_jPanel5MousePressed
 
-    }
 
     /**
      * @param args the command line arguments

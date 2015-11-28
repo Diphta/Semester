@@ -11,8 +11,9 @@ package Classes;
  */
 public class TicketMinor extends Ticket {
     private int Bbillet = 50;
-    public TicketMinor(Costumer costumer) {
+    public TicketMinor(/*Costumer costumer*/) {
         //super(costumer);
+        this.name = "barn";
     }
 
 }

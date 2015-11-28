@@ -11,6 +11,7 @@ package Classes;
  */
 public class Ticket {
     private Costumer costumer;
+    String name;
 
     public Ticket(/**Costumer costumer*/) {
         this.costumer = costumer;
@@ -28,6 +29,10 @@ public class Ticket {
         int sum = 0;
 
         return sum;
+    }
+    
+    public String toString() {
+        return name;
     }
 
 //    public Ticket generateReceit() {

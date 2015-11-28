@@ -55,7 +55,7 @@ public class Test extends javax.swing.JFrame {
         }
         ;
         jButton5 = new javax.swing.JButton();
-        jComboBox5 = new javax.swing.JComboBox();
+        ticketTypeBox = new javax.swing.JComboBox();
         payButtonHall1 = new javax.swing.JButton();
         seatChoiceSal2 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -197,7 +197,7 @@ public class Test extends javax.swing.JFrame {
 
         jButton5.setText("Tilføj billetter");
 
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Billet type", "Voksen billet", "Børne billet", "Pensionist billet" }));
+        ticketTypeBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Billet type", "Voksen billet", "Børne billet", "Pensionist billet" }));
 
         payButtonHall1.setText("Betal");
         payButtonHall1.addActionListener(new java.awt.event.ActionListener() {
@@ -216,7 +216,7 @@ public class Test extends javax.swing.JFrame {
                     .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, seatChoiceSal1Layout.createSequentialGroup()
                         .addGap(0, 300, Short.MAX_VALUE)
-                        .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(ticketTypeBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton5)
                         .addGap(8, 8, 8)
@@ -230,7 +230,7 @@ public class Test extends javax.swing.JFrame {
                 .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(seatChoiceSal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ticketTypeBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton5)
                     .addComponent(payButtonHall1)))
         );
@@ -667,13 +667,27 @@ public class Test extends javax.swing.JFrame {
     }//GEN-LAST:event_seatChoiceSal1MousePressed
 
     private void jPanel5MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MousePressed
-        if (tktHandler.getTickets().size() > 3) {
+        if (tktHandler.getTickets().size() == 4) {
            JOptionPane.showMessageDialog(this, tktHandler.getTooManyTickets());
         } else {
-            Ticket ticket = new Ticket();
-            tktHandler.getTickets().add(ticket);
+            String ticketType;
+            ticketType = (String) ticketTypeBox.getSelectedItem();
             int seat = hall.translateX(evt.getX());
             int row = hall.translateY(evt.getY());
+            Ticket ticket = new Ticket();
+            
+            switch (ticketType) {
+                case "Voksen billet": ticket = new TicketAdult();
+                    break;
+                case "Pensionist billet": ticket = new TicketElder();
+                    break;
+                case "Børne billet": ticket =  new TicketMinor();
+                    break;
+                default:
+                    break;
+            }
+            tktHandler.getTickets().add(ticket);
+            System.out.println(ticket.toString());
             if(seat >= 0 && row >= 0){
             if(evt.getButton()==1){
                 hall.bookSeat(row, seat);
@@ -739,7 +753,6 @@ public class Test extends javax.swing.JFrame {
     private javax.swing.JComboBox jComboBox2;
     private javax.swing.JComboBox jComboBox3;
     private javax.swing.JComboBox jComboBox4;
-    private javax.swing.JComboBox jComboBox5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -772,5 +785,6 @@ public class Test extends javax.swing.JFrame {
     private javax.swing.JPanel seatChoiceSal1;
     private javax.swing.JPanel seatChoiceSal2;
     private javax.swing.JPanel seatChoiceSal3;
+    private javax.swing.JComboBox ticketTypeBox;
     // End of variables declaration//GEN-END:variables
 }

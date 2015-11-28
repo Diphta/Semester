@@ -426,9 +426,6 @@
                   </StringArray>
                 </Property>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox1ActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jButton2">
               <Properties>
@@ -630,55 +627,29 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Component id="phoneField" min="-2" pref="100" max="-2" attributes="0"/>
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Group type="102" attributes="0">
-                                              <Component id="expiration_month" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="32767" attributes="0"/>
-                                              <Component id="expiration_year" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" attributes="0">
-                                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                              <Component id="nameField" min="-2" pref="149" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="ageField" min="-2" pref="48" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="246" max="-2" attributes="0"/>
-                                      <Component id="PayButton" min="-2" pref="105" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
+                              <Component id="discountField" min="-2" pref="150" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="PayButton" min="-2" pref="105" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
-                                      <Component id="jScrollPane1" min="-2" pref="248" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="rabatKodeBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jScrollPane1" alignment="0" min="-2" pref="248" max="-2" attributes="0"/>
+                                  <Component id="ageField" alignment="0" min="-2" pref="48" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
+                                      <Component id="nameField" min="-2" pref="149" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="cardNumberField" min="-2" pref="174" max="-2" attributes="0"/>
+                                      <Component id="lastNameField" min="-2" pref="174" max="-2" attributes="0"/>
                                   </Group>
+                                  <Component id="phoneField" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="291" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="controlDigitsField" min="-2" pref="98" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -687,30 +658,21 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jScrollPane1" min="-2" pref="164" max="-2" attributes="0"/>
-                      <EmptySpace pref="54" max="32767" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="nameField" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="ageField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lastNameField" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="ageField" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="phoneField" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="cardNumberField" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="controlDigitsField" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="102" max="32767" attributes="0"/>
+                      <Component id="rabatKodeBox" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                              <Component id="PayButton" min="-2" pref="46" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="expiration_month" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="expiration_year" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
+                          <Component id="PayButton" min="-2" pref="46" max="-2" attributes="0"/>
+                          <Component id="discountField" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -720,8 +682,11 @@
           <SubComponents>
             <Component class="javax.swing.JTextField" name="nameField">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Name"/>
+                <Property name="text" type="java.lang.String" value="Fornavn"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nameFieldActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="ageField">
               <Properties>
@@ -733,70 +698,13 @@
                 <Property name="text" type="java.lang.String" value="PhoneNumber"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="cardNumberField">
+            <Component class="javax.swing.JTextField" name="lastNameField">
               <Properties>
-                <Property name="text" type="java.lang.String" value="CardNumber"/>
+                <Property name="text" type="java.lang.String" value="Efternavn"/>
               </Properties>
-            </Component>
-            <Component class="javax.swing.JComboBox" name="expiration_year">
-              <Properties>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="32">
-                    <StringItem index="0" value="2015"/>
-                    <StringItem index="1" value="2016"/>
-                    <StringItem index="2" value="2017"/>
-                    <StringItem index="3" value="2018"/>
-                    <StringItem index="4" value="2019"/>
-                    <StringItem index="5" value="2020"/>
-                    <StringItem index="6" value="2021"/>
-                    <StringItem index="7" value="2022"/>
-                    <StringItem index="8" value="2023"/>
-                    <StringItem index="9" value="2024"/>
-                    <StringItem index="10" value="2025"/>
-                    <StringItem index="11" value="2026"/>
-                    <StringItem index="12" value="2027"/>
-                    <StringItem index="13" value="2028"/>
-                    <StringItem index="14" value="2029"/>
-                    <StringItem index="15" value="2030"/>
-                    <StringItem index="16" value="2031"/>
-                    <StringItem index="17" value="2032"/>
-                    <StringItem index="18" value="2033"/>
-                    <StringItem index="19" value="2034"/>
-                    <StringItem index="20" value="2035"/>
-                    <StringItem index="21" value="2036"/>
-                    <StringItem index="22" value="2037"/>
-                    <StringItem index="23" value="2038"/>
-                    <StringItem index="24" value="2039"/>
-                    <StringItem index="25" value="2040"/>
-                    <StringItem index="26" value="2041"/>
-                    <StringItem index="27" value="2042"/>
-                    <StringItem index="28" value="2043"/>
-                    <StringItem index="29" value="2044"/>
-                    <StringItem index="30" value="2045"/>
-                    <StringItem index="31" value=" "/>
-                  </StringArray>
-                </Property>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JComboBox" name="expiration_month">
-              <Properties>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="12">
-                    <StringItem index="0" value="01 (Januar)"/>
-                    <StringItem index="1" value="02 (Februar)"/>
-                    <StringItem index="2" value="03 (Marts)"/>
-                    <StringItem index="3" value="04 (April)"/>
-                    <StringItem index="4" value="05 (Maj)"/>
-                    <StringItem index="5" value="06 (Juni)"/>
-                    <StringItem index="6" value="07 (Juli)"/>
-                    <StringItem index="7" value="08 (August)"/>
-                    <StringItem index="8" value="09 (September)"/>
-                    <StringItem index="9" value="10 (Oktober)"/>
-                    <StringItem index="10" value="11 (November)"/>
-                    <StringItem index="11" value="12 (December)"/>
-                  </StringArray>
-                </Property>
-              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="lastNameFieldActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="PayButton">
               <Properties>
@@ -804,14 +712,6 @@
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PayButtonActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JTextField" name="controlDigitsField">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="ControlDigits"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="controlDigitsFieldActionPerformed"/>
               </Events>
             </Component>
             <Container class="javax.swing.JScrollPane" name="jScrollPane1">
@@ -830,10 +730,18 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JLabel" name="jLabel2">
+            <Component class="javax.swing.JTextField" name="discountField">
               <Properties>
-                <Property name="text" type="java.lang.String" value="/"/>
+                <Property name="enabled" type="boolean" value="false"/>
               </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="rabatKodeBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Jeg har en rabatkode"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rabatKodeBoxActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

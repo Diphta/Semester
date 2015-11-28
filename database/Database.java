@@ -16,9 +16,9 @@ import java.sql.SQLException;
 public class Database {
     private static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
     private static final String DATABASE_USR = "root";
-    private static final String DATABASE_PWD = "";
+    private static final String DATABASE_PWD = "root";
     private static final String DATABASE_URL = "jdbc:mysql://localhost:3306";
-    private static final String SCHEMA = "/test";
+    private static final String SCHEMA = "/film";
     private static String str =  "";
     private static Connection con;
     private Connection db;
@@ -27,7 +27,7 @@ public class Database {
         
     }
     
-    public void connect() throws ClassNotFoundException, SQLException {
+    public static void connect() throws ClassNotFoundException, SQLException {
         Class.forName(JDBC_DRIVER);
         con = DriverManager.getConnection(DATABASE_URL + SCHEMA,
                 DATABASE_USR, DATABASE_PWD);
